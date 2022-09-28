@@ -22,12 +22,15 @@ body{
     background-size: cover;
     min-height: 100vh;
     width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 main{
     display: flex;
     flex-direction: column;
-    width: 100%;
-    height: 60rem;
+    width: 24rem;
+    height: 44rem;
 }
 .logo{
     display: inline-block;
@@ -40,6 +43,7 @@ main{
 .img-main{
     max-width: 100%;
     height: 260px;
+    background: url('./images/hero-mobile.jpg');
 }
 .info-ca-container{
     display: flex;
@@ -80,6 +84,9 @@ main{
 .email-ca::placeholder{
     color: var(--desaturatedRed);
 }
+.container-main-ca{
+    position: relative;
+}
 .arrow-ca-container{
     background-image: linear-gradient(to right, #f8bfbf, #f6b2b2, #f4a6a5, #f19999, #ee8c8c);
     height: 48px;
@@ -90,7 +97,7 @@ main{
     justify-content: center;
     padding-left: 10px;
     position: absolute;
-    bottom: 144px;
+    bottom: 76px;
     right: 36px;
 }
 .arrow-ca-logo{
@@ -100,4 +107,49 @@ main{
     min-width: 20px;
     background-repeat: no-repeat;
     background-size: contain;
+}
+
+@media (min-width: 900px){
+    main{
+        display: grid;
+        min-width: 60rem;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 12rem 1fr;
+        padding: 40px;
+    }
+    .logo{
+        margin-left: 0;
+    }
+    .img-main{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        background-image: url('./images/hero-desktop.jpg');
+        height: 100%;
+        width: 100%;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        border: 0;
+    }
+    .info-ca-container{
+        align-self: start;
+        justify-self: start;
+    }
+    .coming-soon-text{
+        text-align: left;
+        font-size: 60px;
+    }
+    .info-ca-container p{
+        text-align: left;
+        margin-bottom: 40px
+    }
+    .email-ca{
+        width: 22rem;
+    }
+    .arrow-ca-container{
+        bottom: 136px;
+        left: 360px;
+    }
 }
