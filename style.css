@@ -84,12 +84,12 @@ main{
 .email-ca::placeholder{
     color: var(--desaturatedRed);
 }
-.container-main-ca{
+.container-ca-main{
     position: relative;
 }
 .arrow-ca-container{
     background-image: linear-gradient(to right, #f8bfbf, #f6b2b2, #f4a6a5, #f19999, #ee8c8c);
-    height: 48px;
+    height: 46px;
     width: 50px;
     border-radius: 30px;
     display: flex;
@@ -97,8 +97,8 @@ main{
     justify-content: center;
     padding-left: 10px;
     position: absolute;
-    bottom: 76px;
-    right: 36px;
+    right: -14px;
+    bottom: 0px;
 }
 .arrow-ca-logo{
     display: inline-block;
@@ -149,7 +149,7 @@ main{
         width: 22rem;
     }
     .arrow-ca-container{
-        bottom: 136px;
-        left: 360px;
+        bottom: 0;
+        right: -8px;
     }
 }
